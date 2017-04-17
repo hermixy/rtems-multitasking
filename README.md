@@ -47,3 +47,36 @@ On Memory Usage:
 On definitions:
 > A number of type definitions are provided by RTEMS and can be found in
 > rtems.h.
+
+In the RTEMS documentation, the presentation format for each directive includes 
+the following sections:
+* Calling Sequence
+* Directive Status Codes
+* Description
+* Notes
+
+## Key Concepts in RTEMS
+
+1. Objects
+2. Communication and Synchronization
+3. Time
+4. Memory Management
+
+### Objects
+
+RTEMS provides directives which can be used to dynamically create, delete, and
+manupulate a set of predefined object types.
+
+Objects: **task**, **message queues**, **semaphores**, **memory regions**, 
+**memory partitions**, **timers**, **ports**, and **rate monotonic periods**.
+
+All objects are created on the local node as required by the applications and
+**have an RTEMS assigned ID**. All objects has a user-assigned name.
+> The user-assigned name and RTEMS assigned ID are not identical.
+
+Object names are completely arbitrary and selected by the user as a meaningful
+"tag" which may commonly reflect the object’s use in the application.
+Conversely, object IDs are designed to facilitate efficient object manipulation
+by the executive.
+
+
