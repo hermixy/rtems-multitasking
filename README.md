@@ -27,4 +27,23 @@ resources, and to wait for and trigger synchronizing conditions.
 
 ![Image](files/images/rtemsservices.jpg)
 
+> About 32 bit or 64 bit:
+> RTEMS was designed to make no assumptions concerning the characteristics of
+> individual microprocessor families or of specific support hardware. 
 
+### Good boy rtems
+
+On Portability:
+> The use of RTEMS allows the development of real-time applications which can
+> be completely independent of a particular microprocessor architecture.
+
+On Memory Usage:
+> Features such as networking, various fileystems, and many other features are
+> completely optional. This allows the application designer the flexibility to
+> tailor RTEMS to most efficiently meet system requirements while still
+> satisfying even the most stringent memory constraints. As a result, the size
+> of the RTEMS executive is application dependent.
+
+On definitions:
+> A number of type definitions are provided by RTEMS and can be found in
+> rtems.h.
