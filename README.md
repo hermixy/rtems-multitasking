@@ -22,3 +22,9 @@ resources, and to wait for and trigger synchronizing conditions.
   tasks and processors. In addition, one need not develop, test, debug, and
   document routines to manage memory, pass messages, or provide mutual
   exclusion. 
+
+* RTEMS provides the following set of services:
+
+![Image](files/images/rtemsservices.jpg)
+
+
