@@ -22,7 +22,7 @@
 /* forward declarations to avoid warnings */
 rtems_task Init(rtems_task_argument argument);
 
-const char rtems_test_name[] = "HELLO WORLD";
+const char rtems_test_name[] = "Wait queue and Timer Manager";
 rtems_printer rtems_test_printer;
 
 rtems_task Init(
@@ -31,7 +31,7 @@ rtems_task Init(
 {
   rtems_print_printer_printf(&rtems_test_printer);
   rtems_test_begin();
-  printf( "Hello World\n" );
+  printf( "Write two tasks that use Timer Manager to schedule a function that should execute every 0.25 seconds. \n" );
   rtems_test_end();
   exit( 0 );
 }
