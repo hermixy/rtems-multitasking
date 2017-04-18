@@ -80,3 +80,9 @@ Conversely, object IDs are designed to facilitate efficient object manipulation
 by the executive.
 
 
+
+## Troubleshooting
+1. `make: Nothing to be done for 'default_target'.`
+- Remove the o-optimize folder `rm -rf o-optimize`
+2. Run `make` again
+
