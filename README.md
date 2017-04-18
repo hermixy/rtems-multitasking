@@ -82,7 +82,21 @@ by the executive.
 
 
 ## Troubleshooting
-1. `make: Nothing to be done for 'default_target'.`
+1. While performing `make: 
+    ```
+    Nothing to be done for 'default_target'.`
+    ```
 - Remove the o-optimize folder `rm -rf o-optimize`
-2. Run `make` again
+- Run `make` again
 
+2. While perfoming make in the actual code we just wrote:
+```
+make
+Makefile:14: /Makefile.inc: No such file or directory
+Makefile:16: /make/leaf.cfg: No such file or directory
+make: *** No rule to make target '/make/leaf.cfg'.  Stop.
+```
+- Add the RTEMS_MAKEFILE_PATH=INSTALL_POINT/bspname/boardname
+```
+export RTEMS_MAKEFILE_PATH=/home/aos-ubuntu/development/rtems/4.12/arm-rtems4.12/realview_pbx_a9_qemu/
+```
