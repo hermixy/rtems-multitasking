@@ -74,7 +74,7 @@ rtems_task Init(
      * Create Timer Manager using rtems_timer_create directive
      * Set interval of 0.25 sec using rtems_timer_fire_after
      */
-    rtems_status_code rtems_timer_create(
+    /* rtems_status_code rtems_timer_create(
             rtems_name name,
             rtems_id *id
             );
@@ -85,6 +85,8 @@ rtems_task Init(
             rtems_timer_service_routine_entry  routine,
             void *user_data 
             );
+
+    */
 
 
     /* TODO
