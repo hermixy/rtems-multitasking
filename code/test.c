@@ -14,6 +14,9 @@
 #include <rtems/printer.h>
 #include <rtems/test.h>
 
+#include <rtems.h>
+#include <rtems/bspIo.h>
+
 #include <bsp.h> /* for device driver prototypes */
 
 #include <stdio.h>
@@ -31,7 +34,15 @@ rtems_task Init(
 {
   rtems_print_printer_printf(&rtems_test_printer);
   rtems_test_begin();
+  
+  /* edit start */
+  rtems_object_name result;
+  result = rtems_build_name('S', 'A', 'M', 'M');
+
+  printf( "ID= name=%s\n", ((result) ? result : "no name") );
   printf( "Write two tasks that use Timer Manager to schedule a function that should execute every 0.25 seconds. \n" );
+
+  /* edit ends */
   rtems_test_end();
   exit( 0 );
 }
