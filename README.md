@@ -80,6 +80,35 @@ Conversely, object IDs are designed to facilitate efficient object manipulation
 by the executive.
 
 
+### List of Data Types in Rtems
+
+[All the data type](https://docs.rtems.org/doc-current/share/rtems/html/c_user/RTEMS-Data-Types-List-of-Data-Types.html#RTEMS-Data-Types-List-of-Data-Types)
+
+
+### Tasks
+
+The task manager provides a comprehensive set of directives to create, delete,
+and administer tasks. The directives provided by the task manager are:
+
+`rtems_task_create` - Create a task
+`rtems_task_ident` - Get ID of a task
+`rtems_task_self` - Obtain ID of caller
+`rtems_task_start` - Start a task
+`rtems_task_restart` - Restart a task
+`rtems_task_delete` - Delete a task
+`rtems_task_suspend` - Suspend a task
+`rtems_task_resume` - Resume a task
+`rtems_task_is_suspended` - Determine if a task is suspended
+`rtems_task_set_priority` - Set task priority
+`rtems_task_mode` - Change current task’s mode
+`rtems_task_get_note` - Get task notepad entry
+`rtems_task_set_note` - Set task notepad entry
+`rtems_task_wake_after` - Wake up after interval
+`rtems_task_wake_when` - Wake up when specified
+`rtems_iterate_over_all_threads` - Iterate Over Tasks
+`rtems_task_variable_add` - Associate per task variable
+`rtems_task_variable_get` - Obtain value of a a per task variable
+`rtems_task_variable_delete` - Remove per task variable
 
 ## Troubleshooting
 1. While performing `make: 
