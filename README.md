@@ -90,13 +90,21 @@ by the executive.
 - Run `make` again
 
 2. While perfoming make in the actual code we just wrote:
-```
-make
-Makefile:14: /Makefile.inc: No such file or directory
-Makefile:16: /make/leaf.cfg: No such file or directory
-make: *** No rule to make target '/make/leaf.cfg'.  Stop.
-```
-- Add the RTEMS_MAKEFILE_PATH=INSTALL_POINT/bspname/boardname
-```
-export RTEMS_MAKEFILE_PATH=/home/aos-ubuntu/development/rtems/4.12/arm-rtems4.12/realview_pbx_a9_qemu/
-```
+    ```
+    make
+    Makefile:14: /Makefile.inc: No such file or directory
+    Makefile:16: /make/leaf.cfg: No such file or directory
+    make: *** No rule to make target '/make/leaf.cfg'.  Stop.
+    ```
+    - Add the RTEMS_MAKEFILE_PATH=INSTALL_POINT/bspname/boardname
+    
+    ```
+    export RTEMS_MAKEFILE_PATH=/home/aos-ubuntu/development/rtems/4.12/arm-rtems4.12/realview_pbx_a9_qemu/
+    ```
+    [Reference](https://devel.rtems.org/wiki/TBR/UserManual/Example_Application_Compiling)
+
+3. When no qemu-...:
+    ```
+    export PATH=$HOME/development/rtems/4.12/bin:$PATH
+    ```
+
