@@ -38,8 +38,8 @@ rtems_task Init(
   /* edit start 
   rtems_object_name result;
   result = rtems_build_name('S', 'A', 'M', 'M');
-*/
   printf( "ID= name=%s\n", ((result) ? result : "no name") );
+*/
   printf( "Write two tasks that use Timer Manager to schedule a function that should execute every 0.25 seconds. \n" );
 
   /* edit ends */
