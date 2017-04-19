@@ -1,5 +1,16 @@
 # RTEMS Mulitasking
 
+
+### TO USE
+```
+# make the .c files if there are no .exe 
+cd
+make
+
+# run the executable, which is at examples-v2/hello/hello_world_c/rtems-multitasking/code
+QEMU_AUDIO_DRV=none qemu-system-arm -no-reboot -net none -M realview-pbx-a9 -m 256M -serial stdio -kernel examples-v2/hello/hello_world_c/rtems-multitasking/code/o-optimize/hello.exe
+```
+
 * Executive provides an interface to other system components such as interrupt
   handlers and device drivers. 
 
