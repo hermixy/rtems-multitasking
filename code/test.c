@@ -75,18 +75,18 @@ rtems_task Init(
      * Set interval of 0.25 sec using rtems_timer_fire_after
      */
     /* rtems_status_code rtems_timer_create(
-            rtems_name name,
-            rtems_id *id
-            );
+       rtems_name name,
+       rtems_id *id
+       );
 
-    rtems_status_code rtems_timer_fire_after(
-            rtems_id id,
-            rtems_interval ticks, 
-            rtems_timer_service_routine_entry  routine,
-            void *user_data 
-            );
+       rtems_status_code rtems_timer_fire_after(
+       rtems_id id,
+       rtems_interval ticks, 
+       rtems_timer_service_routine_entry  routine,
+       void *user_data 
+       );
 
-    */
+*/
 
 
     /* TODO
@@ -94,6 +94,57 @@ rtems_task Init(
      * and allocate period of 15 sec using rtems_rate_monotonic_period
      */
 
+    /* THe following code has dperiod of 100  and 40, change it to 0.25 and 5 */
+    /* uncomment HERE */
+    /*
+    rtems_task Periodic_task(rtems_task_argument arg)
+    {
+        rtems_name        name_1, name_2;
+        rtems_id          period_1, period_2;
+        rtems_status_code status;
+
+        name_1 = rtems_build_name( 'P', 'E', 'R', '1' );
+        name_2 = rtems_build_name( 'P', 'E', 'R', '2' );
+
+        (void ) rtems_rate_monotonic_create( name_1, &period_1 );
+        (void ) rtems_rate_monotonic_create( name_2, &period_2 );
+
+        while ( 1 ) {
+            if ( rtems_rate_monotonic_period( period_1, 100 ) == RTEMS_TIMEOUT )
+                break;
+
+            if ( rtems_rate_monotonic_period( period_2, 40 ) == RTEMS_TIMEOUT )
+                break;
+
+            /*
+             *      *  Perform first set of actions between clock
+             *           *  ticks 0 and 39 of every 100 ticks.
+             *                */
+/*
+            if ( rtems_rate_monotonic_period( period_2, 30 ) == RTEMS_TIMEOUT )
+                break;
+
+            /*
+             *      *  Perform second set of actions between clock 40 and 69
+             *           *  of every 100 ticks.  THEN ...
+             *                *
+             *                     *  Check to make sure we didn't miss the period_2 period.
+             *                          */
+/*
+            if ( rtems_rate_monotonic_period( period_2, RTEMS_STATUS ) == RTEMS_TIMEOUT )
+                break;
+
+            (void) rtems_rate_monotonic_cancel( period_2 );
+        }
+
+        /* missed period so delete period and SELF */
+/*
+        (void ) rtems_rate_monotonic_delete( period_1 );
+        (void ) rtems_rate_monotonic_delete( period_2 );
+        (void ) task_delete( SELF );
+    }
+
+*/
 
 
     /* edit ends */
